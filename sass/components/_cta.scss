@@ -1,0 +1,9 @@
+.cta {
+  background-color: $secondary;
+  background-image: url(../img/call-to-action-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  padding: 5em 0;
+  color: $text-inverse;
+}
