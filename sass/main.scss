@@ -6,6 +6,8 @@
 // 2. Vendor
 @import 'vendor/normalize';
 
+@import 'layout/grid';
+
 
 // 1. Base styles
 @import 'base/base';
@@ -13,7 +15,7 @@
 
 
 // 1. Layout 
-@import 'layout/grid';
+
 @import 'layout/nav';
 @import 'layout/header';
 @import 'layout/hero';
