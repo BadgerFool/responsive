@@ -432,6 +432,8 @@ h2 {
   right: 0;
   font-size: 1.2rem;
   overflow: hidden;
+  -webkit-transition: all ease-in-out .25s;
+  transition: all ease-in-out .25s;
 }
 
 .main-nav ul {
@@ -456,6 +458,16 @@ h2 {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -464,9 +476,12 @@ h2 {
           justify-content: center;
 }
 
-.main-nav a {
-  text-decoration: none;
-  color: white;
+.main-nav a:hover, .main-nav a:focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.main-nav.is-open {
+  left: 0;
 }
 
 .nav-toggle {
@@ -486,6 +501,8 @@ h2 {
   width: 2em;
   height: 3px;
   background: white;
+  -webkit-transition: all ease-in-out .25s;
+  transition: all ease-in-out .25s;
 }
 
 .hamburger::before {
@@ -496,6 +513,20 @@ h2 {
 .hamburger::after {
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
+}
+
+.hamburger.is-open {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamburger.is-open::after {
+  -webkit-transform: rotate(-90deg) translateX(3px);
+          transform: rotate(-90deg) translateX(3px);
+}
+
+.hamburger.is-open::before {
+  opacity: 0;
 }
 
 .main-header {

@@ -6,6 +6,7 @@
   right: 0;
   font-size: 1.2rem;
   overflow: hidden;
+  transition: all ease-in-out .25s;
 
   ul {
     display: flex;
@@ -18,13 +19,24 @@
     display: flex;
     flex: 1 1 auto;
     border-bottom: 1px solid rgba(0, 0, 0, .25);
-    align-items: center;
-    justify-content: center;
   }
 
   a {
     text-decoration: none;
     color: $text-inverse;
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 0, 0, .10);
+    }
+  }
+
+  &.is-open {
+    left: 0;
   }
 }
 
@@ -48,6 +60,7 @@
   width: 2em;
   height: 3px;
   background: $white;
+  transition: all ease-in-out .25s;
 }
 
 .hamburger::before {
@@ -56,4 +69,16 @@
 
 .hamburger::after {
   transform: translateY(3px);
+}
+
+.hamburger.is-open {
+  transform: rotate(45deg);
+
+  &::after {
+    transform: rotate(-90deg) translateX(3px);
+  }
+
+  &::before {
+    opacity: 0;
+  }
 }
