@@ -1,8 +1,9 @@
 .main-header {
   position: absolute;
-  top: 1em;
+  top: 0;
   left: 0;
   right: 0;
+  padding-top: 1em;
 }
 
 
@@ -12,6 +13,3 @@
   max-width: 15rem;
 }
 
-.main-nav {
-  display: none;
-}

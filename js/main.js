@@ -1,1 +1,3 @@
-console.log('poop');
+$(document).ready(function() {
+    
+})
