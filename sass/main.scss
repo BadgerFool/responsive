@@ -8,11 +8,13 @@
 
 
 // 1. Base styles
-
+@import 'base/base';
 
 
 // 1. Layout 
-
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/hero';
 
 
 // 1. Components 
